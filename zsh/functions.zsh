@@ -23,6 +23,12 @@ function hist() {
     history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
 }
 
+# Outputs man page as pdf and shows it
+function man2pdf() {
+    man -t ${1:?Specify man as arg} | ps2pdf -dCompatibility=1.3 - - > /tmp/${1}.pdf
+    open /tmp/${1}.pdf
+}
+
 # find shorthand
 function f() {
     find . -name "$1"
@@ -112,9 +118,9 @@ function extract() {
 }
 
 function scpp() {
-    scp "$1" nicknisi@nicknisi.com:/var/www/nicknisi.com/public_html/share;
-    echo "http://nicknisi.com/share/$1" | pbcopy;
-    echo "Copied to clipboard: http://nicknisi.com/share/$1"
+    scp "$1" user@localhost:/var/www/localhost/public_html/share;
+    echo "http://localhost/share/$1" | pbcopy;
+    echo "Copied to clipboard: http://localhost/share/$1"
 }
 
 # syntax highlight the contents of a file or the clipboard and place the result on the clipboard
