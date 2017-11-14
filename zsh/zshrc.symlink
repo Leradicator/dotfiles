@@ -32,6 +32,8 @@ for config ($ZSH/**/*completion.sh) source $config
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
 
+export PATH=/opt/local/bin:$PATH
+
 export PATH=/usr/local/bin:$PATH
 
 # add /usr/local/sbin
