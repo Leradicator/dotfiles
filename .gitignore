@@ -1,4 +1,3 @@
-*.netrwhist
 *.swp
 
 plug.vim.old
@@ -9,3 +8,4 @@ config/nvim/plugged
 config/nvim/autoload/plug.vim
 vim/vim.symlink/spell/
 vim/vim.symlink/plugged/
+config/nvim/.netrwhist
