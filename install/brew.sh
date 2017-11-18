@@ -21,6 +21,7 @@ formulas=(
     hub
     markdown
     neovim/neovim/neovim
+    python3
     node
     nginx
     reattach-to-user-namespace
@@ -40,5 +41,8 @@ for formula in "${formulas[@]}"; do
         echo "$formula already installed... skipping."
     else
         brew install $formula
+        if [ "$formula" = "python3" ]; then
+            brew link --overwrite python3
+        fi
     fi
 done
