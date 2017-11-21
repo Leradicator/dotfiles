@@ -22,6 +22,7 @@ formulas=(
     markdown
     neovim/neovim/neovim
     python3
+    ncurses
     node
     nginx
     reattach-to-user-namespace
