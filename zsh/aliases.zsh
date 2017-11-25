@@ -8,6 +8,7 @@ else # OS X `ls`
     colorflag="-G"
 fi
 
+#aliased vim to neovim
 alias vim="nvim"
 
 # Filesystem aliases
@@ -21,6 +22,24 @@ alias la="ls -AF ${colorflag}"
 alias ll="ls -lFh ${colorflag}"
 alias lld="ls -l | grep ^d"
 alias rmf="rm -rf"
+
+#working with virtualenvwrapper
+# doc and tribute for this blob: https://gist.github.com/bbengfort/246bc820e76b48f71df7
+alias venv="workon"
+alias venv.exit="deactivate"
+alias venv.ls="lsvirtualenv"
+alias venv.show="showvirtualenv"
+alias venv.mk="python3.6 -m venv"
+alias venv.rm="rmvirtualenv"
+alias venv.switch="workon"
+alias venv.add="add2virtualenv"
+alias venv.cd="cdproject"
+alias venv.cdsp="cdsitepackages"
+alias venv.cdenv="cdvirtualenv"
+alias venv.lssp="lssitepackages"
+alias venv.proj="mkproject"
+alias venv.setproj="setvirtualenvproject"
+alias venv.wipe="wipeenv"
 
 # Helpers
 alias grep='grep --color=auto'
